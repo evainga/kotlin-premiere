@@ -1,0 +1,14 @@
+language: kotlin
+
+sudo: false
+
+install: true
+
+script: mvn clean verify
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+
+jdk:
+- openjdk8
+
